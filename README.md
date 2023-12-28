@@ -55,5 +55,29 @@ For default configurations of metadata, we do not include that in the file name.
       <td>N/A</td>
       <td>2048</td>
     </tr>
+    <tr>
+      <td>phi-2</td>
+      <td>2048</td>
+      <td>N/A</td>
+      <td>2048</td>
+    </tr>
+    <tr>
+      <td>phi-1_5</td>
+      <td>2048</td>
+      <td>N/A</td>
+      <td>2048</td>
+    </tr>
+    <tr>
+      <td>gpt2</td>
+      <td>1024</td>
+      <td>N/A</td>
+      <td>1024</td>
+    </tr>
+    <tr>
+      <td>gpt2-medium</td>
+      <td>1024</td>
+      <td>N/A</td>
+      <td>1024</td>
+    </tr>
   </tbody>
 </table>
