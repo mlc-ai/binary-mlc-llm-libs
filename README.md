@@ -26,6 +26,18 @@ For default configurations of metadata, we do not include that in the file name.
   </thead>
   <tbody>
     <tr>
+      <td>Llama-3-8b-Instruct</td>
+      <td>8192</td>
+      <td>N/A</td>
+      <td>1024</td>
+    </tr>
+    <tr>
+      <td>Llama-3-70b-Instruct</td>
+      <td>8192</td>
+      <td>N/A</td>
+      <td>1024</td>
+    </tr>
+    <tr>
       <td>Llama-2-7b-chat-hf</td>
       <td>4096</td>
       <td>N/A</td>
