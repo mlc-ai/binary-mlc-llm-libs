@@ -2,10 +2,13 @@ import os
 import subprocess
 import sys
 from pathlib import Path
+from huggingface_hub import hf_hub_download
+import json
 
 LOG_PATH = Path("./") / "compile_wasm_log.txt"
 # NOTE(Harry): Set this to your binary-mlc-llm-libs repo.
 BINARY_DIR = "/path/to/binary-mlc-llm-libs/web-llm-models/v0_2_80"
+CONFIG_PATH = "/path/to/hf-configs/"
 
 # -1. Clean log file
 cmd = [
@@ -23,6 +26,7 @@ def compile(
     context_window_size,
     prefill_chunk_size,
     model_id,
+    repo_id=None,
     use_sliding_window=False,
     max_batch_size=None,
 ):
@@ -37,21 +41,53 @@ def compile(
         subprocess.run(cmd, check=True, stdout=log_file, stderr=subprocess.STDOUT, env=os.environ)
 
         # 1. Gen config
-        cmd = [
-            sys.executable,
-            "-m",
-            "mlc_llm",
-            "gen_config",
-            model,
-            "--output",
-            "dist/temp",
-            "--conv-template",
-            "LM",
-            "--quantization",
-            quantization,
-            "--prefill-chunk-size",
-            str(prefill_chunk_size),
-        ]
+        if repo_id:
+            HF_TOKEN = os.getenv("HF_TOKEN")
+            try:
+                cfg_path = hf_hub_download(
+                    repo_id=repo_id,
+                    filename="config.json",
+                    token=HF_TOKEN,
+                )
+            except Exception as err:
+                print(err)
+
+            dst =  f"{CONFIG_PATH}{repo_id.split('/')[-1]}.config.json"
+            with open(cfg_path, "r", encoding="utf-8") as src, open(dst, "w", encoding="utf-8") as out:
+                json.dump(json.load(src), out, indent=2, ensure_ascii=False)
+
+            cmd = [
+                sys.executable,
+                "-m",
+                "mlc_llm",
+                "gen_config",
+                dst,
+                "--output",
+                "dist/temp",
+                "--conv-template",
+                "LM",
+                "--quantization",
+                quantization,
+                "--prefill-chunk-size",
+                str(prefill_chunk_size),
+            ]
+        else:
+            cmd = [
+                sys.executable,
+                "-m",
+                "mlc_llm",
+                "gen_config",
+                model,
+                "--output",
+                "dist/temp",
+                "--conv-template",
+                "LM",
+                "--quantization",
+                quantization,
+                "--prefill-chunk-size",
+                str(prefill_chunk_size),
+            ]
+
         if use_sliding_window:
             cmd += [
                 "--sliding-window-size",
