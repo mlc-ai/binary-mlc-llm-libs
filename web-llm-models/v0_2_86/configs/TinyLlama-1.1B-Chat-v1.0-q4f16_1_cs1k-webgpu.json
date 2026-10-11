@@ -1,0 +1,74 @@
+{
+  "version": "0.1.0",
+  "model_type": "llama",
+  "quantization": "q4f16_1",
+  "model_config": {
+    "hidden_size": 2048,
+    "intermediate_size": 5632,
+    "num_attention_heads": 32,
+    "num_hidden_layers": 22,
+    "rms_norm_eps": 1e-05,
+    "vocab_size": 32000,
+    "position_embedding_base": 10000.0,
+    "context_window_size": 2048,
+    "prefill_chunk_size": 2048,
+    "num_key_value_heads": 4,
+    "head_dim": 64,
+    "tensor_parallel_shards": 1,
+    "max_batch_size": 80
+  },
+  "vocab_size": 32000,
+  "context_window_size": 2048,
+  "sliding_window_size": -1,
+  "prefill_chunk_size": 2048,
+  "attention_sink_size": -1,
+  "tensor_parallel_shards": 1,
+  "temperature": 1.0,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.0,
+  "repetition_penalty": 1.0,
+  "top_p": 1.0,
+  "tokenizer_files": [
+    "tokenizer.model",
+    "tokenizer.json",
+    "tokenizer_config.json"
+  ],
+  "tokenizer_info": {
+    "token_postproc_method": "byte_fallback",
+    "prepend_space_in_encode": true,
+    "strip_space_in_decode": true
+  },
+  "conv_template": {
+    "name": "tinyllama_v1_0",
+    "system_template": "<|system|>\n{system_message}</s>",
+    "system_message": "You are a helpful chatbot.",
+    "system_prefix_token_ids": null,
+    "add_role_after_system_message": true,
+    "roles": {
+      "user": "<|user|>",
+      "assistant": "<|assistant|>"
+    },
+    "role_templates": {
+      "user": "{user_message}",
+      "assistant": "{assistant_message}",
+      "tool": "{tool_message}"
+    },
+    "messages": [],
+    "seps": [
+      "</s>"
+    ],
+    "role_content_sep": "\n",
+    "role_empty_sep": "\n",
+    "stop_str": [
+      "</s>"
+    ],
+    "stop_token_ids": [
+      2
+    ],
+    "function_string": "",
+    "use_function_calling": false
+  },
+  "pad_token_id": 0,
+  "bos_token_id": 1,
+  "eos_token_id": 2
+}

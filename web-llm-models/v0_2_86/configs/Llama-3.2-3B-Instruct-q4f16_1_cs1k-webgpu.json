@@ -1,0 +1,90 @@
+{
+  "version": "0.1.0",
+  "model_type": "llama",
+  "quantization": "q4f16_1",
+  "model_config": {
+    "hidden_size": 3072,
+    "intermediate_size": 8192,
+    "num_attention_heads": 24,
+    "num_hidden_layers": 28,
+    "rms_norm_eps": 1e-05,
+    "vocab_size": 128256,
+    "tie_word_embeddings": true,
+    "position_embedding_base": 500000.0,
+    "rope_scaling": {
+      "factor": 32.0,
+      "high_freq_factor": 4.0,
+      "low_freq_factor": 1.0,
+      "original_max_position_embeddings": 8192,
+      "rope_type": "llama3"
+    },
+    "context_window_size": 131072,
+    "prefill_chunk_size": 8192,
+    "num_key_value_heads": 8,
+    "head_dim": 128,
+    "tensor_parallel_shards": 1,
+    "pipeline_parallel_stages": 1,
+    "max_batch_size": 128
+  },
+  "vocab_size": 128256,
+  "context_window_size": 131072,
+  "sliding_window_size": -1,
+  "prefill_chunk_size": 8192,
+  "attention_sink_size": -1,
+  "tensor_parallel_shards": 1,
+  "pipeline_parallel_stages": 1,
+  "temperature": 0.6,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.0,
+  "repetition_penalty": 1.0,
+  "top_p": 0.9,
+  "tokenizer_files": [
+    "tokenizer.json",
+    "tokenizer_config.json"
+  ],
+  "tokenizer_info": {
+    "token_postproc_method": "byte_level",
+    "prepend_space_in_encode": false,
+    "strip_space_in_decode": false
+  },
+  "conv_template": {
+    "name": "llama-3_1",
+    "system_template": "<|start_header_id|>system<|end_header_id|>\n\n{system_message}<|eot_id|>",
+    "system_message": "You are a helpful, respectful and honest assistant.",
+    "system_prefix_token_ids": [
+      128000
+    ],
+    "add_role_after_system_message": true,
+    "roles": {
+      "user": "<|start_header_id|>user",
+      "assistant": "<|start_header_id|>assistant",
+      "tool": "<|start_header_id|>ipython"
+    },
+    "role_templates": {
+      "user": "{user_message}",
+      "assistant": "{assistant_message}",
+      "tool": "{tool_message}"
+    },
+    "messages": [],
+    "seps": [
+      "<|eot_id|>"
+    ],
+    "role_content_sep": "<|end_header_id|>\n\n",
+    "role_empty_sep": "<|end_header_id|>\n\n",
+    "stop_str": [],
+    "stop_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "function_string": "",
+    "use_function_calling": false
+  },
+  "pad_token_id": 0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "version": "0.1.0",
+  "model_type": "qwen3_5",
+  "quantization": "q4f16_1",
+  "model_config": {
+    "hidden_size": 4096,
+    "intermediate_size": 12288,
+    "num_attention_heads": 16,
+    "num_hidden_layers": 32,
+    "num_key_value_heads": 4,
+    "rms_norm_eps": 1e-06,
+    "vocab_size": 248320,
+    "rope_theta": 10000000,
+    "head_dim": 256,
+    "hidden_act": "silu",
+    "attention_bias": false,
+    "tie_word_embeddings": false,
+    "linear_key_head_dim": 128,
+    "linear_value_head_dim": 128,
+    "linear_num_key_heads": 16,
+    "linear_num_value_heads": 32,
+    "linear_conv_kernel_dim": 4,
+    "full_attention_interval": 4,
+    "partial_rotary_factor": 0.25,
+    "context_window_size": 262144,
+    "prefill_chunk_size": 2048,
+    "tensor_parallel_shards": 1,
+    "dtype": "bfloat16",
+    "max_batch_size": 128
+  },
+  "vocab_size": 248320,
+  "context_window_size": 262144,
+  "sliding_window_size": -1,
+  "prefill_chunk_size": 2048,
+  "attention_sink_size": -1,
+  "tensor_parallel_shards": 1,
+  "pipeline_parallel_stages": 1,
+  "active_vocab_size": 248077,
+  "temperature": 1.0,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.0,
+  "repetition_penalty": 1.0,
+  "top_p": 1.0,
+  "tokenizer_files": [
+    "tokenizer.json",
+    "vocab.json",
+    "merges.txt",
+    "tokenizer_config.json"
+  ],
+  "tokenizer_info": {
+    "token_postproc_method": "byte_level",
+    "prepend_space_in_encode": false,
+    "strip_space_in_decode": false
+  },
+  "conv_template": {
+    "name": "qwen2",
+    "system_template": "<|im_start|>system\n{system_message}<|im_end|>\n",
+    "system_message": "You are a helpful assistant.",
+    "system_prefix_token_ids": null,
+    "add_role_after_system_message": true,
+    "roles": {
+      "user": "<|im_start|>user",
+      "assistant": "<|im_start|>assistant"
+    },
+    "role_templates": {
+      "user": "{user_message}",
+      "assistant": "{assistant_message}",
+      "tool": "{tool_message}"
+    },
+    "messages": [],
+    "seps": [
+      "<|im_end|>\n"
+    ],
+    "role_content_sep": "\n",
+    "role_empty_sep": "\n",
+    "stop_str": [
+      "<|endoftext|>",
+      "<|im_end|>"
+    ],
+    "stop_token_ids": [
+      151643,
+      151645
+    ],
+    "function_string": "",
+    "use_function_calling": false
+  },
+  "pad_token_id": 0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "model_task": "chat",
+  "embedding_metadata": null
+}
