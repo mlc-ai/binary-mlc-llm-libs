@@ -4399,6 +4399,318 @@
         "prefill_chunk_size=512",
         "--enable-subgroups"
       ]
+    },
+    {
+      "path": "base/MiniCPM5-2B-q4f16_1_cs1k-webgpu.wasm",
+      "sha256": "7320c2247dc45fb366b24545b907d9d9ea51fb771884f0634400439907333fe9",
+      "bytes": 7325710,
+      "config": "configs/MiniCPM5-2B-q4f16_1_cs1k-webgpu.json",
+      "config_sha256": "c34d1f543c23a3af5405d2e22c9dac8dca4d72440ce195087474f16f1e66c243",
+      "config_source": {
+        "repository": "mlc-ai/MiniCPM5-2B-q4f16_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f16_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024"
+      ]
+    },
+    {
+      "path": "sg32/MiniCPM5-2B-q4f16_1_cs1k-webgpu.wasm",
+      "sha256": "6cbbcbbbaad3da1b1d0347e3ed543ace81857c347b860894eb61926109be87d5",
+      "bytes": 7327347,
+      "config": "configs/MiniCPM5-2B-q4f16_1_cs1k-webgpu.json",
+      "config_sha256": "c34d1f543c23a3af5405d2e22c9dac8dca4d72440ce195087474f16f1e66c243",
+      "config_source": {
+        "repository": "mlc-ai/MiniCPM5-2B-q4f16_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f16_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024",
+        "--enable-subgroups"
+      ]
+    },
+    {
+      "path": "base/MiniCPM5-2B-q4f32_1_cs1k-webgpu.wasm",
+      "sha256": "09ce50eeb02892cc389ba7f20d425a95b36d07e529ceee08c698123c3f237957",
+      "bytes": 7069902,
+      "config": "configs/MiniCPM5-2B-q4f32_1_cs1k-webgpu.json",
+      "config_sha256": "6612d69e54c274845731721903fd76b2ccfd8cb4935d8bb2e76149edaaf8579c",
+      "config_source": {
+        "repository": "mlc-ai/MiniCPM5-2B-q4f32_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f32_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024"
+      ]
+    },
+    {
+      "path": "sg32/MiniCPM5-2B-q4f32_1_cs1k-webgpu.wasm",
+      "sha256": "25f8759e537d350fbfd73f1d1bcde604be78a9a7d028f8931cdd4b9c84098509",
+      "bytes": 7071567,
+      "config": "configs/MiniCPM5-2B-q4f32_1_cs1k-webgpu.json",
+      "config_sha256": "6612d69e54c274845731721903fd76b2ccfd8cb4935d8bb2e76149edaaf8579c",
+      "config_source": {
+        "repository": "mlc-ai/MiniCPM5-2B-q4f32_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f32_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024",
+        "--enable-subgroups"
+      ]
+    },
+    {
+      "path": "base/SmolLM3-3B-q4f16_1_cs1k-webgpu.wasm",
+      "sha256": "c221a897e601cb06465023b794dae1ccbc04e596ac3f08590dc5d72ca52c8589",
+      "bytes": 7165808,
+      "config": "configs/SmolLM3-3B-q4f16_1_cs1k-webgpu.json",
+      "config_sha256": "d1b37a3c2b4b7c080d262598bf488e65c6a5c07167577ee17fdd836b6b3ae546",
+      "config_source": {
+        "repository": "mlc-ai/SmolLM3-3B-q4f16_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f16_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024"
+      ]
+    },
+    {
+      "path": "sg32/SmolLM3-3B-q4f16_1_cs1k-webgpu.wasm",
+      "sha256": "3b33bf9b87d074d079c5f890dd648d41f5ee663e0b1a17d4d3409ea4a60693fb",
+      "bytes": 7166561,
+      "config": "configs/SmolLM3-3B-q4f16_1_cs1k-webgpu.json",
+      "config_sha256": "d1b37a3c2b4b7c080d262598bf488e65c6a5c07167577ee17fdd836b6b3ae546",
+      "config_source": {
+        "repository": "mlc-ai/SmolLM3-3B-q4f16_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f16_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024",
+        "--enable-subgroups"
+      ]
+    },
+    {
+      "path": "base/SmolLM3-3B-q4f32_1_cs1k-webgpu.wasm",
+      "sha256": "173f44ed5289a745f4d8c093eadfebe77aa456188ad2f30b7aa579e36bc832a3",
+      "bytes": 6937532,
+      "config": "configs/SmolLM3-3B-q4f32_1_cs1k-webgpu.json",
+      "config_sha256": "7d8d095b2f859d8b282fbd0d5ea53245a7dc268e41c1c653b3bf825012ab1b0d",
+      "config_source": {
+        "repository": "mlc-ai/SmolLM3-3B-q4f32_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f32_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024"
+      ]
+    },
+    {
+      "path": "sg32/SmolLM3-3B-q4f32_1_cs1k-webgpu.wasm",
+      "sha256": "33e43b623400b484cba958588e2680fb6e1ef2d5e34dd8d271a696753be32c68",
+      "bytes": 6938312,
+      "config": "configs/SmolLM3-3B-q4f32_1_cs1k-webgpu.json",
+      "config_sha256": "7d8d095b2f859d8b282fbd0d5ea53245a7dc268e41c1c653b3bf825012ab1b0d",
+      "config_source": {
+        "repository": "mlc-ai/SmolLM3-3B-q4f32_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f32_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024",
+        "--enable-subgroups"
+      ]
+    },
+    {
+      "path": "base/LFM2.5-1.2B-Instruct-q4f16_1_cs1k-webgpu.wasm",
+      "sha256": "e73a3ea6a0acff8986255a6c89c0eed6e0e904573e7e2872d177eeeaae711c68",
+      "bytes": 5894059,
+      "config": "configs/LFM2.5-1.2B-Instruct-q4f16_1_cs1k-webgpu.json",
+      "config_sha256": "b90184e0a1cee0fb5af28b2b5bbf941a69ae49f34221904036b747beceacd8ce",
+      "config_source": {
+        "repository": "mlc-ai/LFM2.5-1.2B-Instruct-q4f16_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f16_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024"
+      ]
+    },
+    {
+      "path": "sg32/LFM2.5-1.2B-Instruct-q4f16_1_cs1k-webgpu.wasm",
+      "sha256": "46e19068928991d53873362ac9d402a3082a181dd726cb20d5a845b6bfff496a",
+      "bytes": 5896170,
+      "config": "configs/LFM2.5-1.2B-Instruct-q4f16_1_cs1k-webgpu.json",
+      "config_sha256": "b90184e0a1cee0fb5af28b2b5bbf941a69ae49f34221904036b747beceacd8ce",
+      "config_source": {
+        "repository": "mlc-ai/LFM2.5-1.2B-Instruct-q4f16_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f16_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024",
+        "--enable-subgroups"
+      ]
+    },
+    {
+      "path": "base/LFM2.5-1.2B-Instruct-q4f32_1_cs1k-webgpu.wasm",
+      "sha256": "10eb7feba0bd48400a63c87128270192b96ca21bc62eb6d96ec7cedd7bbf6bef",
+      "bytes": 5837732,
+      "config": "configs/LFM2.5-1.2B-Instruct-q4f32_1_cs1k-webgpu.json",
+      "config_sha256": "d6db5cbdb1de48a602ebcd300c2474f36bda756bf253e4da813a7e568b271c49",
+      "config_source": {
+        "repository": "mlc-ai/LFM2.5-1.2B-Instruct-q4f32_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f32_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024"
+      ]
+    },
+    {
+      "path": "sg32/LFM2.5-1.2B-Instruct-q4f32_1_cs1k-webgpu.wasm",
+      "sha256": "3a8e56c641ffac03d2b01d07458a3c7f6f555255ca24309b4d94d9bd6873cf5e",
+      "bytes": 5839869,
+      "config": "configs/LFM2.5-1.2B-Instruct-q4f32_1_cs1k-webgpu.json",
+      "config_sha256": "d6db5cbdb1de48a602ebcd300c2474f36bda756bf253e4da813a7e568b271c49",
+      "config_source": {
+        "repository": "mlc-ai/LFM2.5-1.2B-Instruct-q4f32_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f32_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024",
+        "--enable-subgroups"
+      ]
+    },
+    {
+      "path": "base/LFM2.5-350M-q4f16_1_cs1k-webgpu.wasm",
+      "sha256": "e1838125b0e87690321092b2ce379997eecd4d2c834bf5b39488fedee1941102",
+      "bytes": 5876473,
+      "config": "configs/LFM2.5-350M-q4f16_1_cs1k-webgpu.json",
+      "config_sha256": "b11bff4041180c0705d75f5992ccb47e8253ce112a5ab0f3deea4f6d382df83b",
+      "config_source": {
+        "repository": "mlc-ai/LFM2.5-350M-q4f16_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f16_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024"
+      ]
+    },
+    {
+      "path": "sg32/LFM2.5-350M-q4f16_1_cs1k-webgpu.wasm",
+      "sha256": "96fd36e322e60bd57080ef804f540d1bb6c214738b2dbfbe7277f7f90971f0d2",
+      "bytes": 5878585,
+      "config": "configs/LFM2.5-350M-q4f16_1_cs1k-webgpu.json",
+      "config_sha256": "b11bff4041180c0705d75f5992ccb47e8253ce112a5ab0f3deea4f6d382df83b",
+      "config_source": {
+        "repository": "mlc-ai/LFM2.5-350M-q4f16_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f16_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024",
+        "--enable-subgroups"
+      ]
+    },
+    {
+      "path": "base/LFM2.5-350M-q4f32_1_cs1k-webgpu.wasm",
+      "sha256": "ddc88e744b754c93dce5d1b17b6e1c980cbf3e09b3bf5662f63135c14dba8c38",
+      "bytes": 5820021,
+      "config": "configs/LFM2.5-350M-q4f32_1_cs1k-webgpu.json",
+      "config_sha256": "1e60698b506c24d0263670b2d98fcc1405562be6c04eb5f0072f3ca4020e4f2a",
+      "config_source": {
+        "repository": "mlc-ai/LFM2.5-350M-q4f32_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f32_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024"
+      ]
+    },
+    {
+      "path": "sg32/LFM2.5-350M-q4f32_1_cs1k-webgpu.wasm",
+      "sha256": "f1a00d89f13266df2cd546a1b2033fa77dc9e2c82f83796f8e689a0e9c14785b",
+      "bytes": 5822161,
+      "config": "configs/LFM2.5-350M-q4f32_1_cs1k-webgpu.json",
+      "config_sha256": "1e60698b506c24d0263670b2d98fcc1405562be6c04eb5f0072f3ca4020e4f2a",
+      "config_source": {
+        "repository": "mlc-ai/LFM2.5-350M-q4f32_1-MLC",
+        "revision": "TBD-after-upload"
+      },
+      "compile_args": [
+        "--quantization",
+        "q4f32_1",
+        "--device",
+        "webgpu",
+        "--overrides",
+        "prefill_chunk_size=1024",
+        "--enable-subgroups"
+      ]
     }
   ]
 }
