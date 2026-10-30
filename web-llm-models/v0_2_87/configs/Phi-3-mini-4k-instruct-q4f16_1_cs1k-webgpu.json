@@ -1,0 +1,85 @@
+{
+  "model_type": "phi3",
+  "quantization": "q4f16_1",
+  "model_config": {
+    "model_type": "phi3",
+    "hidden_size": 3072,
+    "vocab_size": 32064,
+    "num_hidden_layers": 32,
+    "num_attention_heads": 32,
+    "intermediate_size": 8192,
+    "rms_norm_eps": 1e-05,
+    "num_key_value_heads": 32,
+    "max_position_embeddings": 4096,
+    "position_embedding_base": 10000.0,
+    "context_window_size": 4096,
+    "prefill_chunk_size": 2048,
+    "head_dim": 96,
+    "tensor_parallel_shards": 1,
+    "max_batch_size": 80
+  },
+  "vocab_size": 32064,
+  "context_window_size": 4096,
+  "sliding_window_size": -1,
+  "prefill_chunk_size": 2048,
+  "attention_sink_size": -1,
+  "tensor_parallel_shards": 1,
+  "mean_gen_len": 128,
+  "max_gen_len": 512,
+  "shift_fill_factor": 0.3,
+  "temperature": 0.7,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.0,
+  "repetition_penalty": 1.0,
+  "top_p": 0.95,
+  "conv_template": {
+    "name": "phi-3",
+    "system_template": "<|system|>\n{system_message}",
+    "system_message": "You are a helpful digital assistant. Please provide safe, ethical and accurate information to the user.",
+    "system_prefix_token_ids": [
+      1
+    ],
+    "add_role_after_system_message": true,
+    "roles": {
+      "user": "<|user|>",
+      "assistant": "<|assistant|>"
+    },
+    "role_templates": {
+      "user": "{user_message}",
+      "assistant": "{assistant_message}",
+      "tool": "{tool_message}"
+    },
+    "messages": [],
+    "seps": [
+      "<|end|>\n"
+    ],
+    "role_content_sep": "\n",
+    "role_empty_sep": "\n",
+    "stop_str": [
+      "<|endoftext|>"
+    ],
+    "stop_token_ids": [
+      2,
+      32000,
+      32001,
+      32007
+    ],
+    "function_string": "",
+    "use_function_calling": false
+  },
+  "pad_token_id": 32000,
+  "bos_token_id": 1,
+  "eos_token_id": [
+    32000,
+    32001,
+    32007
+  ],
+  "tokenizer_files": [
+    "tokenizer.model",
+    "tokenizer.json",
+    "added_tokens.json",
+    "tokenizer_config.json"
+  ],
+  "token_table_postproc_method": "byte_fallback",
+  "version": "0.1.0"
+}

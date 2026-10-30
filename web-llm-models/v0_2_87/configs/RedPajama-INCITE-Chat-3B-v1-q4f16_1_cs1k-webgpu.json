@@ -1,0 +1,70 @@
+{
+  "model_type": "gpt_neox",
+  "quantization": "q4f16_1",
+  "model_config": {
+    "use_parallel_residual": false,
+    "hidden_size": 2560,
+    "intermediate_size": 10240,
+    "num_attention_heads": 32,
+    "num_hidden_layers": 32,
+    "layer_norm_eps": 1e-05,
+    "vocab_size": 50432,
+    "rotary_pct": 1.0,
+    "position_embedding_base": 10000,
+    "context_window_size": 2048,
+    "head_dim": 80,
+    "prefill_chunk_size": 2048,
+    "tensor_parallel_shards": 1,
+    "ffn_out_dtype": "float32",
+    "max_batch_size": 80
+  },
+  "vocab_size": 50432,
+  "context_window_size": 2048,
+  "sliding_window_size": -1,
+  "prefill_chunk_size": 2048,
+  "attention_sink_size": -1,
+  "tensor_parallel_shards": 1,
+  "mean_gen_len": 128,
+  "max_gen_len": 512,
+  "shift_fill_factor": 0.3,
+  "temperature": 0.7,
+  "repetition_penalty": 1.0,
+  "top_p": 0.95,
+  "conv_template": {
+    "name": "redpajama_chat",
+    "system_template": "{system_message}",
+    "system_message": "",
+    "add_role_after_system_message": true,
+    "roles": {
+      "user": "<human>",
+      "assistant": "<bot>"
+    },
+    "role_templates": {
+      "user": "{user_message}",
+      "assistant": "{assistant_message}",
+      "tool": "{tool_message}"
+    },
+    "messages": [],
+    "seps": [
+      "\n"
+    ],
+    "role_content_sep": ": ",
+    "role_empty_sep": ":",
+    "stop_str": [
+      "<human>"
+    ],
+    "stop_token_ids": [
+      0
+    ],
+    "function_string": "",
+    "use_function_calling": false
+  },
+  "pad_token_id": 0,
+  "bos_token_id": 0,
+  "eos_token_id": 0,
+  "tokenizer_files": [
+    "tokenizer.json",
+    "tokenizer_config.json"
+  ],
+  "version": "0.1.0"
+}

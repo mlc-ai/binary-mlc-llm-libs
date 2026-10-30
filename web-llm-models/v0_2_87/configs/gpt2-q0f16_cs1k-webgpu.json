@@ -1,0 +1,67 @@
+{
+  "model_type": "gpt2",
+  "quantization": "q0f16",
+  "model_config": {
+    "vocab_size": 50257,
+    "n_embd": 768,
+    "n_layer": 12,
+    "n_head": 12,
+    "layer_norm_epsilon": 1e-05,
+    "n_inner": 3072,
+    "context_window_size": 1024,
+    "prefill_chunk_size": 1024,
+    "scale_attn_by_inverse_layer_idx": false,
+    "tensor_parallel_shards": 1,
+    "max_batch_size": 80
+  },
+  "vocab_size": 50257,
+  "context_window_size": 1024,
+  "sliding_window_size": -1,
+  "prefill_chunk_size": 1024,
+  "attention_sink_size": -1,
+  "tensor_parallel_shards": 1,
+  "mean_gen_len": 128,
+  "max_gen_len": 512,
+  "shift_fill_factor": 0.3,
+  "temperature": 0.7,
+  "repetition_penalty": 1.0,
+  "top_p": 0.95,
+  "conv_template": {
+    "name": "gpt2",
+    "system_template": "{system_message}",
+    "system_message": "",
+    "add_role_after_system_message": true,
+    "roles": {
+      "user": "",
+      "assistant": ""
+    },
+    "role_templates": {
+      "user": "{user_message}",
+      "assistant": "{assistant_message}",
+      "tool": "{tool_message}"
+    },
+    "messages": [],
+    "seps": [
+      ""
+    ],
+    "role_content_sep": "",
+    "role_empty_sep": "",
+    "stop_str": [
+      "</s>"
+    ],
+    "stop_token_ids": [
+      50256
+    ],
+    "function_string": "",
+    "use_function_calling": false
+  },
+  "pad_token_id": 0,
+  "bos_token_id": 50256,
+  "eos_token_id": 50256,
+  "tokenizer_files": [
+    "tokenizer.json",
+    "vocab.json",
+    "merges.txt"
+  ],
+  "version": "0.1.0"
+}

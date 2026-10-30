@@ -1,0 +1,73 @@
+{
+  "version": "0.1.0",
+  "model_type": "bert",
+  "quantization": "q0f32",
+  "model_config": {
+    "vocab_size": 30522,
+    "hidden_size": 768,
+    "num_hidden_layers": 12,
+    "num_attention_heads": 12,
+    "intermediate_size": 3072,
+    "hidden_act": "gelu",
+    "layer_norm_eps": 1e-12,
+    "context_window_size": 512,
+    "prefill_chunk_size": 512,
+    "tensor_parallel_shards": 1,
+    "head_dim": 64,
+    "max_batch_size": 80
+  },
+  "vocab_size": 30522,
+  "context_window_size": 512,
+  "sliding_window_size": -1,
+  "prefill_chunk_size": 512,
+  "attention_sink_size": -1,
+  "tensor_parallel_shards": 1,
+  "pipeline_parallel_stages": 1,
+  "temperature": 1.0,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.0,
+  "repetition_penalty": 1.0,
+  "top_p": 1.0,
+  "tokenizer_files": [
+    "tokenizer.json",
+    "tokenizer_config.json"
+  ],
+  "tokenizer_info": {
+    "token_postproc_method": "byte_fallback",
+    "prepend_space_in_encode": false,
+    "strip_space_in_decode": false
+  },
+  "conv_template": {
+    "name": "LM",
+    "system_template": "{system_message}",
+    "system_message": "",
+    "system_prefix_token_ids": [
+      1
+    ],
+    "add_role_after_system_message": true,
+    "roles": {
+      "user": "",
+      "assistant": ""
+    },
+    "role_templates": {
+      "user": "{user_message}",
+      "assistant": "{assistant_message}",
+      "tool": "{tool_message}"
+    },
+    "messages": [],
+    "seps": [
+      ""
+    ],
+    "role_content_sep": "",
+    "role_empty_sep": "",
+    "stop_str": [],
+    "stop_token_ids": [
+      2
+    ],
+    "function_string": "",
+    "use_function_calling": false
+  },
+  "pad_token_id": 0,
+  "bos_token_id": 1,
+  "eos_token_id": 2
+}

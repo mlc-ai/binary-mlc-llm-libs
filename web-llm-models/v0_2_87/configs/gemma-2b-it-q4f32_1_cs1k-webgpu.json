@@ -1,0 +1,77 @@
+{
+  "model_type": "gemma",
+  "quantization": "q4f32_1",
+  "model_config": {
+    "hidden_size": 2048,
+    "hidden_act": "gelu",
+    "intermediate_size": 16384,
+    "attention_bias": false,
+    "num_attention_heads": 8,
+    "num_key_value_heads": 1,
+    "head_dim": 256,
+    "num_hidden_layers": 18,
+    "rms_norm_eps": 1e-06,
+    "vocab_size": 256000,
+    "position_embedding_base": 10000.0,
+    "context_window_size": 8192,
+    "prefill_chunk_size": 1024,
+    "tensor_parallel_shards": 1,
+    "max_batch_size": 80
+  },
+  "vocab_size": 256000,
+  "context_window_size": 8192,
+  "sliding_window_size": -1,
+  "prefill_chunk_size": 1024,
+  "attention_sink_size": -1,
+  "tensor_parallel_shards": 1,
+  "mean_gen_len": 128,
+  "max_gen_len": 512,
+  "shift_fill_factor": 0.3,
+  "temperature": 0.7,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 1.0,
+  "repetition_penalty": 1.0,
+  "top_p": 0.95,
+  "conv_template": {
+    "name": "gemma_instruction",
+    "system_template": "<bos>{system_message}",
+    "system_message": "",
+    "system_prefix_token_ids": [
+      2
+    ],
+    "add_role_after_system_message": true,
+    "roles": {
+      "user": "<start_of_turn>user",
+      "assistant": "<start_of_turn>model"
+    },
+    "role_templates": {
+      "user": "{user_message}",
+      "assistant": "{assistant_message}",
+      "tool": "{tool_message}"
+    },
+    "messages": [],
+    "seps": [
+      "<end_of_turn>\n"
+    ],
+    "role_content_sep": "\n",
+    "role_empty_sep": "\n",
+    "stop_str": [
+      "<end_of_turn>"
+    ],
+    "stop_token_ids": [
+      1,
+      107
+    ],
+    "function_string": "",
+    "use_function_calling": false
+  },
+  "pad_token_id": 0,
+  "bos_token_id": 2,
+  "eos_token_id": 1,
+  "tokenizer_files": [
+    "tokenizer.model",
+    "tokenizer.json",
+    "tokenizer_config.json"
+  ],
+  "version": "0.1.0"
+}
