@@ -49,8 +49,8 @@
     },
     {
       "path": "sg32/LFM3-1.7B-q8f16_1_cs256-webgpu.wasm",
-      "sha256": "0bcb0a3ec2cea99b5ee8545352901d5aa61cd8f0c125446b08b643083f979757",
-      "bytes": 6722977,
+      "sha256": "1b2786c1b49069056371d907191872f63b3eeddc31e174758be31429eaebd819",
+      "bytes": 6718914,
       "config": "configs/LFM3-1.7B-q8f16_1_cs256-webgpu.json",
       "config_sha256": "1f38ffbd420c6174f3248a6097fe3274df51e5e594a705fe1192b735c7719555",
       "config_source": {
@@ -65,13 +65,24 @@
         "quantization": "q8f16_1",
         "variant": "sg32",
         "config_sha256": "1f38ffbd420c6174f3248a6097fe3274df51e5e594a705fe1192b735c7719555",
-        "sha256": "0bcb0a3ec2cea99b5ee8545352901d5aa61cd8f0c125446b08b643083f979757",
+        "sha256": "1b2786c1b49069056371d907191872f63b3eeddc31e174758be31429eaebd819",
         "context_window_size": 262144,
         "prefill_chunk_size": 256,
         "parameter_count": 348,
         "schema_errors": [],
-        "mlc_commit": "14ce983399b1d15f8acab1954374713a8ceaec04",
-        "mlc_worktree_diff_sha256": "69cab9536fe36c66949028949acbedff0fca72dc0464567fbaed979e3607c3e0"
+        "mlc_commit": "5621d923a8076db23049353777817185fdfb6cdb",
+        "tvm_commit": "f7fcf831f78e867e9868e44e8a36ab93beafaae9",
+        "tirx_fix_commit": "bd87460d68f6e88527cd25232954f02f5e3ef966",
+        "tirx_fix_pr": "https://github.com/apache/tvm-tirx/pull/250",
+        "compiler_fix_source": "The reviewed validation build uses this fix before its rebase for upstream PR250."
+      },
+      "generation_checks": {
+        "devices": [
+          "Apple M2 Ultra / Metal",
+          "NVIDIA RTX5090 / Vulkan"
+        ],
+        "requests_per_device": 6,
+        "token_exact_against_native": true
       }
     },
     {
@@ -103,8 +114,8 @@
     },
     {
       "path": "sg32/LFM3-1.7B-q8f32_1_cs256-webgpu.wasm",
-      "sha256": "901f3d4ca929cc1e851e8ae4d0e89238cae20673c3135e74e2d80aa9d7763784",
-      "bytes": 6630750,
+      "sha256": "b26048cc01e1c78b6ddf178d9b24e872b50057894449af1bc1ce7e3e407d9923",
+      "bytes": 6626689,
       "config": "configs/LFM3-1.7B-q8f32_1_cs256-webgpu.json",
       "config_sha256": "9e7cb6b7918baa2c838ccb4e4baf77451b861821f07143698b8aa3b35f9a7958",
       "config_source": {
@@ -119,13 +130,24 @@
         "quantization": "q8f32_1",
         "variant": "sg32",
         "config_sha256": "9e7cb6b7918baa2c838ccb4e4baf77451b861821f07143698b8aa3b35f9a7958",
-        "sha256": "901f3d4ca929cc1e851e8ae4d0e89238cae20673c3135e74e2d80aa9d7763784",
+        "sha256": "b26048cc01e1c78b6ddf178d9b24e872b50057894449af1bc1ce7e3e407d9923",
         "context_window_size": 262144,
         "prefill_chunk_size": 256,
         "parameter_count": 348,
         "schema_errors": [],
-        "mlc_commit": "14ce983399b1d15f8acab1954374713a8ceaec04",
-        "mlc_worktree_diff_sha256": "69cab9536fe36c66949028949acbedff0fca72dc0464567fbaed979e3607c3e0"
+        "mlc_commit": "5621d923a8076db23049353777817185fdfb6cdb",
+        "tvm_commit": "f7fcf831f78e867e9868e44e8a36ab93beafaae9",
+        "tirx_fix_commit": "bd87460d68f6e88527cd25232954f02f5e3ef966",
+        "tirx_fix_pr": "https://github.com/apache/tvm-tirx/pull/250",
+        "compiler_fix_source": "The reviewed validation build uses this fix before its rebase for upstream PR250."
+      },
+      "generation_checks": {
+        "devices": [
+          "Apple M2 Ultra / Metal",
+          "NVIDIA RTX5090 / Vulkan"
+        ],
+        "requests_per_device": 6,
+        "token_exact_against_native": true
       }
     }
   ],
@@ -147,7 +169,8 @@
             "peakBytes": 1955189272,
             "createdBuffers": 2289,
             "measurement": "GPUDevice.createBuffer requested sizes minus explicit destroy; excludes driver overhead and textures"
-          }
+          },
+          "artifact_scope": "Original pre-fix library. Not remeasured for the rebuilt subgroup library."
         },
         {
           "capture": "LFM3-1.7B_q8f16_1_base_iii_ctx4096.json",
@@ -194,7 +217,8 @@
             "peakBytes": 2175709208,
             "createdBuffers": 2289,
             "measurement": "GPUDevice.createBuffer requested sizes minus explicit destroy; excludes driver overhead and textures"
-          }
+          },
+          "artifact_scope": "Original pre-fix library. Not remeasured for the rebuilt subgroup library."
         }
       ]
     }
