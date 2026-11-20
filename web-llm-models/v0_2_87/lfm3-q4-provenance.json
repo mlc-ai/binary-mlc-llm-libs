@@ -1,0 +1,83 @@
+{
+  "library_version": "v0_2_87",
+  "web_runtime_version": "0.28.0-dev2",
+  "source": {
+    "repo": "LiquidAI/LFM3-1.7B",
+    "revision": "1da06bec6a819da10b54c67e5c90972b46d81871"
+  },
+  "compiler": {
+    "mlc_llm": "5621d923a8076db23049353777817185fdfb6cdb",
+    "tvm": "f7fcf831f78e867e9868e44e8a36ab93beafaae9",
+    "tvm_tirx": "bd87460d68f6e88527cd25232954f02f5e3ef966",
+    "wasm_linker": "Object-format linker from apache/tvm#21007; runtime bitcode rebuilt from the TVM source above.",
+    "wasm_runtime_tirx": "fdd60d0e46eb84f9db924a108a4867edb0941e2c"
+  },
+  "hf_upload_receipts": {
+    "mlc-ai/LFM3-1.7B-q4f16_1-MLC": {
+      "revision": "074e7321aa0dc70440396d9c31e145c9e51de12a"
+    },
+    "mlc-ai/LFM3-1.7B-q4f32_1-MLC": {
+      "revision": "e7f24c15eb24d2c21418067a39f87961f05fd992"
+    }
+  },
+  "libraries": [
+    {
+      "path": "base/LFM3-1.7B-q4f16_1_cs256-webgpu.wasm",
+      "sha256": "97a2ed8f6112d3cbdec08b2e82fc69aae53a7e0db4c3e906540f3d3c01fd84a4",
+      "config": "configs/LFM3-1.7B-q4f16_1_cs256-webgpu.json",
+      "config_sha256": "b6d4a6f89dec006df30987b2073ac5f5a46a4a2ae68c4a15a6c2d48c0c323354",
+      "quantization": "q4f16_1",
+      "context_window_size": 262144,
+      "prefill_chunk_size": 256,
+      "parameter_count": 348,
+      "compile_args": [
+        "--device",
+        "webgpu"
+      ]
+    },
+    {
+      "path": "sg32/LFM3-1.7B-q4f16_1_cs256-webgpu.wasm",
+      "sha256": "e7e15272794961d0d374d87873a0a25ca08e74968822fc6180061ceef1eb0675",
+      "config": "configs/LFM3-1.7B-q4f16_1_cs256-webgpu.json",
+      "config_sha256": "b6d4a6f89dec006df30987b2073ac5f5a46a4a2ae68c4a15a6c2d48c0c323354",
+      "quantization": "q4f16_1",
+      "context_window_size": 262144,
+      "prefill_chunk_size": 256,
+      "parameter_count": 348,
+      "compile_args": [
+        "--device",
+        "webgpu",
+        "--enable-subgroups"
+      ]
+    },
+    {
+      "path": "base/LFM3-1.7B-q4f32_1_cs256-webgpu.wasm",
+      "sha256": "c0422611faeb21d3aa0e3b99531de754931b8caa1249db1d75301c81f4380ccd",
+      "config": "configs/LFM3-1.7B-q4f32_1_cs256-webgpu.json",
+      "config_sha256": "e54bb6ca8e90655a623e96faf92de5fa15d671d86270caf83806b481e61bd0ee",
+      "quantization": "q4f32_1",
+      "context_window_size": 262144,
+      "prefill_chunk_size": 256,
+      "parameter_count": 348,
+      "compile_args": [
+        "--device",
+        "webgpu"
+      ]
+    },
+    {
+      "path": "sg32/LFM3-1.7B-q4f32_1_cs256-webgpu.wasm",
+      "sha256": "99834bf31867fbb6a27749b7ff401bd69cea85f28957df5de78f1981e899b011",
+      "config": "configs/LFM3-1.7B-q4f32_1_cs256-webgpu.json",
+      "config_sha256": "e54bb6ca8e90655a623e96faf92de5fa15d671d86270caf83806b481e61bd0ee",
+      "quantization": "q4f32_1",
+      "context_window_size": 262144,
+      "prefill_chunk_size": 256,
+      "parameter_count": 348,
+      "compile_args": [
+        "--device",
+        "webgpu",
+        "--enable-subgroups"
+      ]
+    }
+  ]
+}

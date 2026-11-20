@@ -1,0 +1,131 @@
+{
+  "version": "0.1.0",
+  "model_type": "lfm3",
+  "quantization": "q8f32_1",
+  "model_config": {
+    "vocab_size": 128000,
+    "hidden_size": 2048,
+    "num_hidden_layers": 24,
+    "num_attention_heads": 16,
+    "num_key_value_heads": 4,
+    "intermediate_size": 7680,
+    "norm_eps": 1e-05,
+    "conv_L_cache": 7,
+    "conv_bias": false,
+    "block_auto_adjust_ff_dim": false,
+    "block_ffn_dim_multiplier": 1.0,
+    "block_multiple_of": 256,
+    "layer_types": [
+      "conv",
+      "conv",
+      "full_attention",
+      "conv",
+      "sliding_attention",
+      "conv",
+      "full_attention",
+      "conv",
+      "sliding_attention",
+      "conv",
+      "full_attention",
+      "conv",
+      "sliding_attention",
+      "conv",
+      "full_attention",
+      "conv",
+      "sliding_attention",
+      "conv",
+      "full_attention",
+      "conv",
+      "sliding_attention",
+      "conv",
+      "full_attention",
+      "conv"
+    ],
+    "full_attn_idxs": null,
+    "rope_theta": 1000000.0,
+    "tie_word_embeddings": true,
+    "head_dim": 128,
+    "context_window_size": 262144,
+    "prefill_chunk_size": 256,
+    "tensor_parallel_shards": 1,
+    "max_batch_size": 1,
+    "sliding_window": 256,
+    "use_sandwich_norm": true,
+    "rope_parameters": {
+      "full_attention": {
+        "partial_rotary_factor": 0.5,
+        "rope_theta": 1000000.0,
+        "rope_type": "default"
+      },
+      "sliding_attention": {
+        "rope_theta": 10000,
+        "rope_type": "default"
+      }
+    }
+  },
+  "vocab_size": 128000,
+  "context_window_size": 262144,
+  "sliding_window_size": -1,
+  "prefill_chunk_size": 256,
+  "attention_sink_size": -1,
+  "tensor_parallel_shards": 1,
+  "pipeline_parallel_stages": 1,
+  "active_vocab_size": 125033,
+  "temperature": 0.1,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.0,
+  "repetition_penalty": 1.1,
+  "top_p": 1.0,
+  "tokenizer_files": [
+    "tokenizer.json",
+    "tokenizer_config.json"
+  ],
+  "tokenizer_info": {
+    "token_postproc_method": "byte_level",
+    "prepend_space_in_encode": false,
+    "strip_space_in_decode": false
+  },
+  "conv_template": {
+    "name": "lfm3",
+    "system_template": "<|im_start|>system\n{system_message}<|im_end|>\n",
+    "system_message": "",
+    "render_empty_system_message": false,
+    "system_prefix_token_ids": [
+      124894
+    ],
+    "add_role_after_system_message": true,
+    "roles": {
+      "user": "<|im_start|>user",
+      "assistant": "<|im_start|>assistant"
+    },
+    "role_templates": {
+      "user": "{user_message}",
+      "assistant": "{assistant_message}",
+      "tool": "{tool_message}"
+    },
+    "messages": [],
+    "seps": [
+      "<|im_end|>\n"
+    ],
+    "role_content_sep": "\n",
+    "role_empty_sep": "\n<think>",
+    "stop_str": [
+      "<|im_end|>"
+    ],
+    "stop_token_ids": [
+      124900
+    ],
+    "strip_reasoning_in_history": false,
+    "reasoning_history_style": "lfm3",
+    "qwen3_8_reasoning_effort": null,
+    "function_string": "",
+    "use_function_calling": false
+  },
+  "pad_token_id": 124893,
+  "bos_token_id": 124894,
+  "eos_token_id": [
+    124900
+  ],
+  "model_task": "chat",
+  "embedding_metadata": null
+}

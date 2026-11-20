@@ -1,0 +1,226 @@
+{
+  "library_version": "v0_2_87",
+  "web_runtime_version": "0.28.0-dev2",
+  "source": {
+    "repo": "LiquidAI/LFM3-1.7B",
+    "revision": "1da06bec6a819da10b54c67e5c90972b46d81871"
+  },
+  "hf_upload_receipts": {
+    "mlc-ai/LFM3-1.7B-q8f16_1-MLC": {
+      "manifest_sha256": "4309ee41e0c6e0b49823c30c189eb7293c50281eea260a8b5d8dc8f944cec1bc",
+      "revision": "da27f38fd202a66dcba74a3ac74d0f6c2be0ad5a",
+      "verified_files": 68,
+      "package_manifest_sha256": "4ba3428cff97a0346e415206d3b1b93a4f6ff616003f2023b9c8815c441f9dfb"
+    },
+    "mlc-ai/LFM3-1.7B-q8f32_1-MLC": {
+      "manifest_sha256": "4309ee41e0c6e0b49823c30c189eb7293c50281eea260a8b5d8dc8f944cec1bc",
+      "revision": "513805f25bc1a9219a58fd78a655944acf5f7570",
+      "verified_files": 68,
+      "package_manifest_sha256": "56b5f93f2006f874ef1d9ac964e78b172963d5f3d7afa33ab28976a15094a658"
+    }
+  },
+  "libraries": [
+    {
+      "path": "base/LFM3-1.7B-q8f16_1_cs256-webgpu.wasm",
+      "sha256": "3e03820910546015922b614348ef0364425eba65aae4db09743fcb920ec9fc7f",
+      "bytes": 6721792,
+      "config": "configs/LFM3-1.7B-q8f16_1_cs256-webgpu.json",
+      "config_sha256": "1f38ffbd420c6174f3248a6097fe3274df51e5e594a705fe1192b735c7719555",
+      "config_source": {
+        "repo_id": "mlc-ai/LFM3-1.7B-q8f16_1-MLC",
+        "revision": "da27f38fd202a66dcba74a3ac74d0f6c2be0ad5a",
+        "url": "https://huggingface.co/mlc-ai/LFM3-1.7B-q8f16_1-MLC/resolve/da27f38fd202a66dcba74a3ac74d0f6c2be0ad5a/mlc-chat-config.json"
+      },
+      "context_window_size": 262144,
+      "prefill_chunk_size": 256,
+      "parameter_schema": "passed",
+      "compiler_receipt": {
+        "quantization": "q8f16_1",
+        "variant": "base",
+        "config_sha256": "1f38ffbd420c6174f3248a6097fe3274df51e5e594a705fe1192b735c7719555",
+        "sha256": "3e03820910546015922b614348ef0364425eba65aae4db09743fcb920ec9fc7f",
+        "context_window_size": 262144,
+        "prefill_chunk_size": 256,
+        "parameter_count": 348,
+        "schema_errors": [],
+        "mlc_commit": "14ce983399b1d15f8acab1954374713a8ceaec04",
+        "mlc_worktree_diff_sha256": "69cab9536fe36c66949028949acbedff0fca72dc0464567fbaed979e3607c3e0"
+      }
+    },
+    {
+      "path": "sg32/LFM3-1.7B-q8f16_1_cs256-webgpu.wasm",
+      "sha256": "1b2786c1b49069056371d907191872f63b3eeddc31e174758be31429eaebd819",
+      "bytes": 6718914,
+      "config": "configs/LFM3-1.7B-q8f16_1_cs256-webgpu.json",
+      "config_sha256": "1f38ffbd420c6174f3248a6097fe3274df51e5e594a705fe1192b735c7719555",
+      "config_source": {
+        "repo_id": "mlc-ai/LFM3-1.7B-q8f16_1-MLC",
+        "revision": "da27f38fd202a66dcba74a3ac74d0f6c2be0ad5a",
+        "url": "https://huggingface.co/mlc-ai/LFM3-1.7B-q8f16_1-MLC/resolve/da27f38fd202a66dcba74a3ac74d0f6c2be0ad5a/mlc-chat-config.json"
+      },
+      "context_window_size": 262144,
+      "prefill_chunk_size": 256,
+      "parameter_schema": "passed",
+      "compiler_receipt": {
+        "quantization": "q8f16_1",
+        "variant": "sg32",
+        "config_sha256": "1f38ffbd420c6174f3248a6097fe3274df51e5e594a705fe1192b735c7719555",
+        "sha256": "1b2786c1b49069056371d907191872f63b3eeddc31e174758be31429eaebd819",
+        "context_window_size": 262144,
+        "prefill_chunk_size": 256,
+        "parameter_count": 348,
+        "schema_errors": [],
+        "mlc_commit": "5621d923a8076db23049353777817185fdfb6cdb",
+        "tvm_commit": "f7fcf831f78e867e9868e44e8a36ab93beafaae9",
+        "tirx_fix_commit": "bd87460d68f6e88527cd25232954f02f5e3ef966",
+        "tirx_fix_pr": "https://github.com/apache/tvm-tirx/pull/250",
+        "compiler_fix_source": "The reviewed validation build uses this fix before its rebase for upstream PR250."
+      },
+      "generation_checks": {
+        "devices": [
+          "Apple M2 Ultra / Metal",
+          "NVIDIA RTX5090 / Vulkan"
+        ],
+        "requests_per_device": 6,
+        "token_exact_against_native": true
+      }
+    },
+    {
+      "path": "base/LFM3-1.7B-q8f32_1_cs256-webgpu.wasm",
+      "sha256": "cb961e62250c8fc8825d8944051f1841521a64fe0e0f181a2eda2655ae0c1f0e",
+      "bytes": 6629343,
+      "config": "configs/LFM3-1.7B-q8f32_1_cs256-webgpu.json",
+      "config_sha256": "9e7cb6b7918baa2c838ccb4e4baf77451b861821f07143698b8aa3b35f9a7958",
+      "config_source": {
+        "repo_id": "mlc-ai/LFM3-1.7B-q8f32_1-MLC",
+        "revision": "513805f25bc1a9219a58fd78a655944acf5f7570",
+        "url": "https://huggingface.co/mlc-ai/LFM3-1.7B-q8f32_1-MLC/resolve/513805f25bc1a9219a58fd78a655944acf5f7570/mlc-chat-config.json"
+      },
+      "context_window_size": 262144,
+      "prefill_chunk_size": 256,
+      "parameter_schema": "passed",
+      "compiler_receipt": {
+        "quantization": "q8f32_1",
+        "variant": "base",
+        "config_sha256": "9e7cb6b7918baa2c838ccb4e4baf77451b861821f07143698b8aa3b35f9a7958",
+        "sha256": "cb961e62250c8fc8825d8944051f1841521a64fe0e0f181a2eda2655ae0c1f0e",
+        "context_window_size": 262144,
+        "prefill_chunk_size": 256,
+        "parameter_count": 348,
+        "schema_errors": [],
+        "mlc_commit": "14ce983399b1d15f8acab1954374713a8ceaec04",
+        "mlc_worktree_diff_sha256": "69cab9536fe36c66949028949acbedff0fca72dc0464567fbaed979e3607c3e0"
+      }
+    },
+    {
+      "path": "sg32/LFM3-1.7B-q8f32_1_cs256-webgpu.wasm",
+      "sha256": "b26048cc01e1c78b6ddf178d9b24e872b50057894449af1bc1ce7e3e407d9923",
+      "bytes": 6626689,
+      "config": "configs/LFM3-1.7B-q8f32_1_cs256-webgpu.json",
+      "config_sha256": "9e7cb6b7918baa2c838ccb4e4baf77451b861821f07143698b8aa3b35f9a7958",
+      "config_source": {
+        "repo_id": "mlc-ai/LFM3-1.7B-q8f32_1-MLC",
+        "revision": "513805f25bc1a9219a58fd78a655944acf5f7570",
+        "url": "https://huggingface.co/mlc-ai/LFM3-1.7B-q8f32_1-MLC/resolve/513805f25bc1a9219a58fd78a655944acf5f7570/mlc-chat-config.json"
+      },
+      "context_window_size": 262144,
+      "prefill_chunk_size": 256,
+      "parameter_schema": "passed",
+      "compiler_receipt": {
+        "quantization": "q8f32_1",
+        "variant": "sg32",
+        "config_sha256": "9e7cb6b7918baa2c838ccb4e4baf77451b861821f07143698b8aa3b35f9a7958",
+        "sha256": "b26048cc01e1c78b6ddf178d9b24e872b50057894449af1bc1ce7e3e407d9923",
+        "context_window_size": 262144,
+        "prefill_chunk_size": 256,
+        "parameter_count": 348,
+        "schema_errors": [],
+        "mlc_commit": "5621d923a8076db23049353777817185fdfb6cdb",
+        "tvm_commit": "f7fcf831f78e867e9868e44e8a36ab93beafaae9",
+        "tirx_fix_commit": "bd87460d68f6e88527cd25232954f02f5e3ef966",
+        "tirx_fix_pr": "https://github.com/apache/tvm-tirx/pull/250",
+        "compiler_fix_source": "The reviewed validation build uses this fix before its rebase for upstream PR250."
+      },
+      "generation_checks": {
+        "devices": [
+          "Apple M2 Ultra / Metal",
+          "NVIDIA RTX5090 / Vulkan"
+        ],
+        "requests_per_device": 6,
+        "token_exact_against_native": true
+      }
+    }
+  ],
+  "memory_measurements": [
+    {
+      "requested_live_gpu_buffers_peak_bytes": 1955189272,
+      "requested_live_gpu_buffers_peak_MiB": 1864.6137924194336,
+      "physical_vram_measured": false,
+      "context": 4096,
+      "captures": [
+        {
+          "capture": "LFM3-1.7B_q8f16_1_sg32_iii_ctx4096.json",
+          "sha256": "05c89a461534d4c5f283a7d008dc4d413f288775319349d0dc7d07e83197c2eb",
+          "quantization": "q8f16_1",
+          "variant": "sg32",
+          "context": 4096,
+          "memory": {
+            "currentBytes": 1953653268,
+            "peakBytes": 1955189272,
+            "createdBuffers": 2289,
+            "measurement": "GPUDevice.createBuffer requested sizes minus explicit destroy; excludes driver overhead and textures"
+          },
+          "artifact_scope": "Original pre-fix library. Not remeasured for the rebuilt subgroup library."
+        },
+        {
+          "capture": "LFM3-1.7B_q8f16_1_base_iii_ctx4096.json",
+          "sha256": "db1413b56cd252823c2d4fdd633a26d2357aab594b719f09c03ba5c05a4b01b7",
+          "quantization": "q8f16_1",
+          "variant": "base",
+          "context": 4096,
+          "memory": {
+            "currentBytes": 1953653268,
+            "peakBytes": 1955189272,
+            "createdBuffers": 2289,
+            "measurement": "GPUDevice.createBuffer requested sizes minus explicit destroy; excludes driver overhead and textures"
+          }
+        }
+      ]
+    },
+    {
+      "requested_live_gpu_buffers_peak_bytes": 2175709208,
+      "requested_live_gpu_buffers_peak_MiB": 2074.9179916381836,
+      "physical_vram_measured": false,
+      "context": 4096,
+      "captures": [
+        {
+          "capture": "LFM3-1.7B_q8f32_1_base_iii_ctx4096.json",
+          "sha256": "996cfb17eedd59fa9f0b893722245a4502f24dc2ca887eda394db2d3a177734d",
+          "quantization": "q8f32_1",
+          "variant": "base",
+          "context": 4096,
+          "memory": {
+            "currentBytes": 2174173204,
+            "peakBytes": 2175709208,
+            "createdBuffers": 2289,
+            "measurement": "GPUDevice.createBuffer requested sizes minus explicit destroy; excludes driver overhead and textures"
+          }
+        },
+        {
+          "capture": "LFM3-1.7B_q8f32_1_sg32_iii_ctx4096.json",
+          "sha256": "983d8802a87342fe09aab633596edb4fe8a0ab633628367575fe66f1ec0b526c",
+          "quantization": "q8f32_1",
+          "variant": "sg32",
+          "context": 4096,
+          "memory": {
+            "currentBytes": 2174173204,
+            "peakBytes": 2175709208,
+            "createdBuffers": 2289,
+            "measurement": "GPUDevice.createBuffer requested sizes minus explicit destroy; excludes driver overhead and textures"
+          },
+          "artifact_scope": "Original pre-fix library. Not remeasured for the rebuilt subgroup library."
+        }
+      ]
+    }
+  ]
+}
